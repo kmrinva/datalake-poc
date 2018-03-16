@@ -1,0 +1,14 @@
+{
+  "cloudwatch.emitMetrics": true,
+  "kinesis.endpoint": "https://kinesis.us-east-1.amazonaws.com",
+  "firehose.endpoint": "",
+  
+  "flows": [
+    {
+      "filePattern": "/tmp/hmda/raw/csv/as_of_year=2010/hmda_lar.csv",
+      "kinesisStream": "datalake-poc-hmda-stream",
+      "initialPosition": "START_OF_FILE",
+      "partitionKeyOption": "RANDOM"
+    }
+  ]
+}
